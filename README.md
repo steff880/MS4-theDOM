@@ -23,34 +23,47 @@ Hello and welcome to TheDOM.
 This is a full-stack project for the Code Institute's Full Stack Web Developer Course.
 
 
-## UX 
-### Project Goals
+# UX 
+## Project Goals
 This is a website for Web Development Courses.
 
 Its goal is to allow the users, to find courses suitable for their needs and be able to purchase them at the end.
 
 Use _HTML5_, _CSS3_, _JavaScript_, _Python_, _Django_ and _Stripe_
-#### User Goals
 
+## Strategy
+### Owner Goals
+- Be able to create a welcoming and easy to navigate site.
+- Be able to, as an admin, Add, Edit, or Delete Courses.
+- Allow users to search the database for courses.
+- Allow users to filter through courses, by selecting a category.
 ### User Stories
-**_As a first-time visitor, I want to be:_**
+
+#### First time user
+I would like to:
+- be able to determine the sites purpose.
+- be able to easily navigate through the site.
+- be able to create an account and receive an email confirmation.
+
+#### Returning User/Shopper
+I would like to:
+- be able to, view all available courses, in order to find one that best suits me.
+- be able to, view course description and reviews to help me decide, if that is the best course for me.
+- be able to, add courses to the shopping bag and also see a confirmation of how many are being added.
+
+#### Logged in User/Shopper
+I would like to:
+- be able to, see all purchased courses in my Profile page.
+- be able to, leave reviews.
+- be able to edit reviews.
+- be able to add courses to my Wishlist.
+- be able to remove courses from my Wishlist.
+## Scope
 
 
-**_As a returning visitor, I want to be:_**
+## Design
 
-
-
-
-### Strategy
-
-
-
-### Scope
-
-
-### Design
-
-#### Colors
+### Colors
 
 
 
