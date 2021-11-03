@@ -17,9 +17,19 @@
 > - [Resources](#resources)
 > - [Acknowledgements](#acknowledgements)
 
+## Intro
+Hello and welcome to TheDOM.
+
+This is a full-stack project for the Code Institute's Full Stack Web Developer Course.
+
+
 ## UX 
 ### Project Goals
+This is a website for Web Development Courses.
 
+Its goal is to allow the users, to find courses suitable for their needs and be able to purchase them at the end.
+
+Use _HTML5_, _CSS3_, _JavaScript_, _Python_, _Django_ and _Stripe_
 #### User Goals
 
 ### User Stories
