@@ -52,6 +52,10 @@ ul {
     color: black;
 }
 
+.custom-input-group-append {
+    margin-left: -50px;
+}
+
 /* Override Bootstrap */
 
 .form-control:focus {
