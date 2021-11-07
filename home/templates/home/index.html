@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container-fluid header-container bg-custom-dark pb-5">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -10,24 +10,32 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-12 col-md-6 my-auto">
-                <h1>
-                    Web Development
-                    <br>
-                    Courses
-                    <br>
-                    For Everyone
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="explore-courses-btn btn btn-lg rounded-0 text-uppercase py-3">
-                            Explore Courses
-                        </a>
-                    </h4>
+    <div class="container-fluid bg-custom-dark bg-custom min-vh-75">
+        <section class="container h-100 py-5">
+            <div class="row h-100 mt-xl-5 mt-md-0">
+                <div class="col-12 col-md-6 pt-xl-5 pt-md-0 my-auto">
+                    <h1 class="text-white">
+                        Web Development
+                        <br>
+                        Courses
+                        <br>
+                        For Everyone
+                    </h1>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="explore-courses-btn btn btn-lg rounded-pill text-uppercase py-3">
+                                Explore Courses
+                                <span class="icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-auto">
+                    <img src="/media/dev-img.svg" class="img-fluid" alt="">
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 {% endblock %}
