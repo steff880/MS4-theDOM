@@ -39,6 +39,7 @@ ul {
     font-size: 1.15rem;
     font-weight: 500;
     box-shadow: -5px 5px 0px #fff;
+    transition: all 0.3s ease-in-out;
 }
 
 .text-white {
@@ -64,6 +65,16 @@ ul {
 
 .custom-input-group-append {
     margin-left: -50px;
+}
+
+/* Hover effects */
+
+.explore-courses-btn:hover,
+.explore-courses-btn:active,
+.explore-courses-btn:focus {
+    transform: scale(0.98);
+    color: #fff;
+    box-shadow: -3px 3px 0px #fff;
 }
 
 /* Override Bootstrap */
