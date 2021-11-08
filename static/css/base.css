@@ -25,10 +25,10 @@ ul {
 }
 
 .bg-custom {
-    background-image: linear-gradient(105deg, 
-    #536DFE 0%, 
-    #536DFE 50%, 
-    transparent 50%);
+    background-image: linear-gradient(105deg,
+            #536DFE 0%,
+            #536DFE 50%,
+            transparent 50%);
 }
 
 .explore-courses-btn {
@@ -94,7 +94,7 @@ ul {
 }
 
 .skewed {
-   transform: skewY(-3deg);
+    transform: skewY(-3deg);
 }
 
 .no-skew {
@@ -158,9 +158,11 @@ ul {
         opacity: 0;
         transform: translateX(-120px);
     }
+
     80% {
         transform: translateX(15px);
     }
+
     100% {
         transform: translateX(0);
         opacity: 1;
@@ -172,12 +174,15 @@ ul {
         opacity: 0;
         transform: scale(0);
     }
+
     60% {
         transform: scale(1.14);
     }
+
     80% {
         transform: scale(0.95);
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -250,6 +255,26 @@ ul {
 
     .explore-courses-btn {
         transform: scale(0.9);
+    }
+
+    @keyframes popUp {
+        0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        60% {
+            transform: scale(1);
+        }
+
+        80% {
+            transform: scale(0.85);
+        }
+
+        100% {
+            transform: scale(0.9);
+            opacity: 1;
+        }
     }
 
     .explore-courses-btn:hover,
