@@ -40,6 +40,9 @@ ul {
     font-weight: 500;
     box-shadow: -5px 5px 0px #fff;
     transition: all 0.3s ease-in-out;
+    animation: popUp 0.9s ease-out;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
 }
 
 .btn-black {
@@ -148,7 +151,44 @@ ul {
     width: fit-content;
 }
 
+/* Animations */
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+    80% {
+        transform: translateX(15px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.14);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* Main CSS */
+
+.hero-heading {
+    animation: moveInRight 1s ease-out;
+}
 
 .content {
     transform: translateX(-80px);
