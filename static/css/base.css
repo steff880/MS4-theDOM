@@ -189,3 +189,29 @@ ul {
         height: calc(100vh - 90px);
     }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hero-heading {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .explore-courses-btn {
+        transform: scale(0.9);
+    }
+
+    .explore-courses-btn:hover,
+    .explore-courses-btn:active,
+    .explore-courses-btn:focus {
+        transform: scale(0.87);
+        color: #fff;
+        box-shadow: -3px 3px 0px #fff;
+    }
+
+    .backend-info {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
