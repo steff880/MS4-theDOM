@@ -18,8 +18,26 @@
       "**/core.Microsoft*": true,
       "**/core.mongo*": true,
       "**/core.python*": true,
-      "**/CVS": true
+      "**/CVS": true,
+      "**/.pyc": true,
+      "**/__pycache__": true,
+      ".pytest_cache": true,
+      "**/.pyi": true
    },
+   "python.linting.pylintArgs": [
+      "--load-plugins=pylint_django",
+      "--load-plugins=pylint_django.checkers.migrations",
+      "--disable=no-member",
+      "--django-settings-module=the_dom.settings",
+      "--disable=C0114, C0115, W0222",
+      "--disable=imported-auth-user",
+      "--disable=invalid-name",
+      "--disable=too-many-ancestors",
+  ],
+  "python.linting.ignorePatterns": [
+   "**/site-packages/**/*.py",
+   "**/migrations/**"
+  ],
    "files.autoSave": "onFocusChange",
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
