@@ -25,6 +25,8 @@ def all_courses(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 courses = courses.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']

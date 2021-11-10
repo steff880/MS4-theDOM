@@ -29,42 +29,94 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 mt-5">
-                    <div class="row mt-1 mb-2"></div>
+                    <div class="row mt-1 mb-2">
+                        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center
+                            justify-content-md-end">
+                            <div class="sort-select-wrapper w-50">
+                                <select id="sort-selector"
+                                    class="custom-select custom-select-sm rounded-0 
+                                    border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
+                                        Sort by...
+                                    </option>
+                                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+                                        Price (low to high)
+                                    </option>
+                                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+                                        Price (high to low)
+                                    </option>
+                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+                                        Name (A-Z)
+                                    </option>
+                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+                                        Name (Z-A)
+                                    </option>
+                                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                        Category (A-Z)
+                                    </option>
+                                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                                        Category (Z-A)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-first">
+                            <p class="text-muted mt-3 text-white text-center text-md-left">
+                                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                    <span class="small font-weight-bold"><a class="text-blue" href="{% url 'courses' %}">Courses Home</a> | </span>
+                                {% endif %}
+                                {{ courses|length }} Courses
+                                {% if search_term %}
+                                    found for <strong>"{{ search_term }}"</strong>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
                     <div class="row">
                         {% for course in courses %}
-                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-4 my-4">
-                                <div class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
-                                    {% if course.image %}
-                                        <a class="text-center pt-4" href="{% url 'course_detail' course.id %}">
-                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75" src="{{ course.image.url }}" alt=" {{ course.name }}">
-                                        </a>
-                                    {% else %}
-                                        <a href="{% url 'course_detail' course.id %}">
-                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75" src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
-                                        </a>
-                                    {% endif %}
-                                    <div class="card-body pb-0">
-                                        <p class="text-white logo-font pl-3 mb-0">
-                                            {{ course.name }}
-                                        </p>
-                                    </div>
-                                    <div class="card-footer bg-custom-dark text-white pt-0 border-0 text-left">
-                                        <div class="row">
-                                            <div class="col">
-                                                <p class="lead text-left font-weight-bold pl-3 mb-0">
-                                                    ${{ course.price }}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-4 my-4">
+                            <div class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
+                                {% if course.image %}
+                                    <a class="text-center pt-4" href="{% url 'course_detail' course.id %}">
+                                        <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                            src="{{ course.image.url }}" alt=" {{ course.name }}">
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'course_detail' course.id %}">
+                                        <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                            src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
+                                    </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="text-white logo-font pl-3 mb-0">
+                                        {{ course.name }}
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-custom-dark text-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead text-left font-weight-bold pl-3 mb-0">
+                                                ${{ course.price }}
+                                            </p>
+                                            {% if course.category %}
+                                                <p class="small mt-1 mb-0">
+                                                    <a href="{% url 'courses' %}?category={{ course.category.name }}"
+                                                        class="text-muted text-white pl-3">
+                                                        <i class="fas fa-tag mr-1"></i>
+                                                        {{ course.category.friendly_name }}
+                                                    </a>
                                                 </p>
-                                            </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-{% endblock %}
 
+{% endblock %}
