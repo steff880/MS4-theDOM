@@ -10,10 +10,58 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ courses }}
+    <div class="container-fluid bg-custom-dark">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center py-5">
+                <div class="text-white">
+                    <div><i class="fas fa-book large-icon rotate"></i></div>
+                </div>
+                <h1 class="text-white font-weight-bold mb-0">
+                    Courses
+                </h1>
+            </div>
+            <div class="col-6">
+                <hr class="bg-white custom-divider">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-custom-dark">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 mt-5">
+                    <div class="row mt-1 mb-2"></div>
+                    <div class="row">
+                        {% for course in courses %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-4 my-4">
+                                <div class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
+                                    {% if course.image %}
+                                        <a class="text-center pt-4" href="">
+                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75" src="{{ course.image.url }}" alt=" {{ course.name }}">
+                                        </a>
+                                    {% else %}
+                                        <a href="">
+                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75" src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
+                                        </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="text-white logo-font pl-3 mb-0">
+                                            {{ course.name }}
+                                        </p>
+                                    </div>
+                                    <div class="card-footer bg-custom-dark text-white pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="lead text-left font-weight-bold pl-3 mb-0">
+                                                    ${{ course.price }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
