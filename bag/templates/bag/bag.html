@@ -27,7 +27,67 @@
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
-                        {{ bag_items }}
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Course Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Qty</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid w-50" src="{{ item.course.image.url }}" alt="">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 pt-3 text-black">{{ item.course.name }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 pt-3 text-black">${{ item.course.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 pt-3 text-black">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0 pt-3 text-black">${{ item.course.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Discount: ${{ discount|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    {% if discount_delta > 0 %}
+                                        <p class="mb-1 text-danger">
+                                            You could get {{ discount_threshold }}% discount by spending just
+                                            <strong>${{ discount_delta }}</strong> more!
+                                        </p>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                    <a href="{% url 'courses' %}"
+                                        class="btn btn-black bg-white border-black btn-lg rounded-pill">
+                                        <span class="icon text-black">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-black">Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn btn-black rounded-pill btn-lg">
+                                        <span class="text-white">Secure Checkout</span>
+                                        <span class="icon text-white">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
