@@ -13,16 +13,17 @@ def bag_contents(request):
     """
     bag_items = []
     total = 0
-    product_count = 0
+    course_count = 0
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
         course = get_object_or_404(Course, pk=item_id)
         total += quantity + course.price
-        product_count += quantity
+        course_count += quantity
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
+            'course': course,
         })
 
     if total < settings.DISCOUNT_THRESHOLD:
@@ -37,7 +38,7 @@ def bag_contents(request):
     context = {
         'bag_items': bag_items,
         'total': total,
-        'product_count': product_count,
+        'course_count': course_count,
         'discount': discount,
         'discount_delta': discount_delta,
         'discount_threshold': settings.DISCOUNT_THRESHOLD,
