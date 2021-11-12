@@ -73,46 +73,55 @@
                         </div>
                     </div>
                     <div class="row">
-                        {% for course in courses %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-4 my-4">
-                            <div class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
-                                {% if course.image %}
-                                    <a class="text-center pt-4" href="{% url 'course_detail' course.id %}">
-                                        <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
-                                            src="{{ course.image.url }}" alt=" {{ course.name }}">
-                                    </a>
-                                {% else %}
-                                    <a href="{% url 'course_detail' course.id %}">
-                                        <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
-                                            src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
-                                    </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="text-white logo-font pl-3 mb-0">
-                                        {{ course.name }}
-                                    </p>
-                                </div>
-                                <div class="card-footer bg-custom-dark text-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead text-left font-weight-bold pl-3 mb-0">
-                                                ${{ course.price }}
+                        {% if courses %}
+                            {% for course in courses %}
+                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 pb-4 my-4">
+                                    <div
+                                        class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
+                                        {% if course.image %}
+                                        <a class="text-center pt-4" href="{% url 'course_detail' course.id %}">
+                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                                src="{{ course.image.url }}" alt=" {{ course.name }}">
+                                        </a>
+                                        {% else %}
+                                        <a href="{% url 'course_detail' course.id %}">
+                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                                src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
+                                        </a>
+                                        {% endif %}
+                                        <div class="card-body pb-0">
+                                            <p class="text-white logo-font pl-3 mb-0">
+                                                {{ course.name }}
                                             </p>
-                                            {% if course.category %}
-                                                <p class="small mt-1 mb-0">
-                                                    <a href="{% url 'courses' %}?category={{ course.category.name }}"
-                                                        class="text-muted text-white pl-3">
-                                                        <i class="fas fa-tag mr-1"></i>
-                                                        {{ course.category.friendly_name }}
-                                                    </a>
-                                                </p>
-                                            {% endif %}
+                                        </div>
+                                        <div class="card-footer bg-custom-dark text-white pt-0 border-0 text-left">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="lead text-left font-weight-bold pl-3 mb-0">
+                                                        ${{ course.price }}
+                                                    </p>
+                                                    {% if course.category %}
+                                                    <p class="small mt-1 mb-0">
+                                                        <a href="{% url 'courses' %}?category={{ course.category.name }}"
+                                                            class="text-muted text-white pl-3">
+                                                            <i class="fas fa-tag mr-1"></i>
+                                                            {{ course.category.friendly_name }}
+                                                        </a>
+                                                    </p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            {% endfor %}
+                        {% else %}
+                        <div class="col-12 pb-4 my-4">
+                            <div class="img-container w-100 text-center">
+                                <img class="img-fluid w-50" src="/media/no-results.svg" alt="No Results">
                             </div>
                         </div>
-                        {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
