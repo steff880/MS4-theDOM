@@ -320,4 +320,8 @@ ul {
         padding-right: 15px;
     }
 
+    .no-results-img {
+        width: 75% !important;
+    }
+
 }
