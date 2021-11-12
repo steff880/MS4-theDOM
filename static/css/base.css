@@ -163,6 +163,9 @@ ul {
     box-shadow: none;
 }
 
+.input-group-append .btn {
+    z-index: 3;
+} 
 
 /* from Bulma */
 .icon {
