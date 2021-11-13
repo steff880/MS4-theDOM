@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container-fluid header-container bg-custom-dark pb-5">
@@ -74,7 +75,7 @@
                         <a class="remove-item text-danger cursor-pointer float-right" id="remove_{{ item.item_id }}">
                             <small>Remove</small>
                         </a>
-                        
+                        <p class="my-0">${{ item.course.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>       
             {% endfor %}
