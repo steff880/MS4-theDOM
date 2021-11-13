@@ -18,7 +18,7 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         course = get_object_or_404(Course, pk=item_id)
-        total += quantity + course.price
+        total += quantity * course.price
         course_count += quantity
         bag_items.append({
             'item_id': item_id,

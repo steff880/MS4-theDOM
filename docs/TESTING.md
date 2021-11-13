@@ -11,3 +11,15 @@ As I was following the Boutique Ado mini project, unintentionally wrote _**produ
 - Fix:
 
 Change the variable _**product_count**_ to _**course_count**_ and append the _**course**_ in _**bag_items**_.
+
+- Bug:
+
+While testing the **Shopping bag page**, noticed that the **bag total** was not calculated properly. 
+Instead of multiplying the _**quantity**_ by the _**price**_, it was adding the _**quantity**_ to the _**price**_.
+
+![Bag Bug](/docs/images/bag-total-bug.png)
+![Bag Bug](/docs/images/bag-total-bug1.png)
+
+- Fix:
+
+Update the **bag total** to be calculated by multiplying the _**quantity**_ by the _**price**_
