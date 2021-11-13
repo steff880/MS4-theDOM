@@ -161,6 +161,10 @@ ul {
     transform: rotate(20deg);
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 /* Override Bootstrap */
 
 .form-control:focus {
