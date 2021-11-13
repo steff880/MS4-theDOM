@@ -365,7 +365,8 @@ input[type=number] {
         padding-right: 15px;
     }
 
-    .no-results-img {
+    .no-results-img,
+    .empty-cart-img {
         width: 75% !important;
     }
 
