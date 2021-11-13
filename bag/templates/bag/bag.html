@@ -41,7 +41,7 @@
                     <div class="col-12 col-md-7 col-lg-2">
                         <p class="my-0"><strong>{{ item.course.name }}</strong></p>
                         <p class="my-0 mt-2"><strong>${{ item.course.price }}</strong></p>
-                        <form class="form update-form mt-5" method="POST" action="">
+                        <form class="form update-form mt-5" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                             {% csrf_token %}
                             <div class="form-group">
                                 <div class="input-group">
@@ -85,7 +85,7 @@
                     <h4 class="mt-4 mb-3"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                     {% if discount_delta > 0 %}
                     <p class="mb-1 text-danger">
-                        You could get {{ discount_threshold }}% discount by spending just
+                        You could get 10% discount by spending just
                         <strong>${{ discount_delta }}</strong> more!
                     </p>
                     {% endif %}
