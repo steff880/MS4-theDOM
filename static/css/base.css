@@ -106,11 +106,13 @@ ul {
 }
 
 .custom-input-group-append,
-.custom-input-group-append-search  {
+.custom-input-group-append-search,
+.custom-input-group-append-qty  {
     margin-left: -50px;
 }
 
-.custom-input-group-prepend {
+.custom-input-group-prepend,
+.custom-input-group-prepend-qty {
     margin-right: -50px;
 }
 
