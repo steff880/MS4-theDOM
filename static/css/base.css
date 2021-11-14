@@ -105,7 +105,8 @@ ul {
     color: black;
 }
 
-.custom-input-group-append {
+.custom-input-group-append,
+.custom-input-group-append-search  {
     margin-left: -50px;
 }
 
