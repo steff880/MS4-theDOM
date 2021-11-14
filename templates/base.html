@@ -77,8 +77,8 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            class="text-white nav-link">
-                            <div class="text-center">
+                            class="text-white nav-link custom-hover">
+                            <div class="text-center custom-hover">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
@@ -98,7 +98,7 @@
                     </li>
                     <li class="list-inline-item">
                         <a class="nav-link text-white" href="">
-                            <div class="text-center">
+                            <div class="text-center custom-hover">
                                 <div><i class="fas fa-heart fa-lg"></i></div>
                                 <p class="my-0">Wishlist</p>
                             </div>
@@ -106,7 +106,8 @@
                     </li>
                     <li class="list-inline-item">
                         <a href="{% url 'view_bag' %}"
-                            class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %} nav-link">
+                            class="{% if grand_total %}text-primary font-weight-bold{% else %}text-white{% endif %}
+                            nav-link custom-hover">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
