@@ -57,7 +57,7 @@ class Order(models.Model):
         return self.order_number
 
 
-class OrderLineItems(models.Model):
+class OrderLineItem(models.Model):
     """
     OrderLineItems Model
     """
