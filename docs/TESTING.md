@@ -23,3 +23,16 @@ Instead of multiplying the _**quantity**_ by the _**price**_, it was adding the 
 - Fix:
 
 Update the **bag total** to be calculated by multiplying the _**quantity**_ by the _**price**_
+
+- Bug:
+
+Issue calculating the **order total** correctly. 
+
+When testing to see the order after checkout in admin panel, realized that **discount** is applied to orders _below_ the threshold ($30).
+
+![Bag Bug](/docs/images/order-total-discount-bug.png)
+![Bag Bug](/docs/images/order-total-discount-bug1.png)
+
+- Fix:
+
+Change code to apply the discount only when the **total** is **_greater_** than **discount threshold**
