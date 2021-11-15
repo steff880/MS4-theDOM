@@ -299,6 +299,10 @@ ul {
     overflow-y: auto;
 }
 
+.order-summary {
+    min-height: 50vh;
+}
+
 /* remove arrows from input type number */
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 
@@ -390,7 +394,8 @@ input[type=number] {
         box-shadow: -3px 3px 0px #fff;
     }
 
-    .backend-info {
+    .backend-info,
+    .order-summary {
         padding-left: 15px;
         padding-right: 15px;
     }

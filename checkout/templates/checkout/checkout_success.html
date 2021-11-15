@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container-fluid header-container bg-custom-dark pb-5">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+   <div class="container-fluid py-3 mb-2">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 text-center">
+                <div class="text-black">
+                    <div><i class="fas fa-handshake large-icon rotate"></i></div>
+                </div>
+                <h1 class="font-weight-bold text-black">Thank You</h2>
+            </div>
+            <div class="col-6 my-5">
+                <hr class="bg-dark custom-divider">
+            </div>
+        </div>
+        <div class="col-12 py-3 mb-3 text-center">
+            <p class="text-black">
+                Your order information is below. A confirmation email will be sent to
+                <strong>{{ order.email }}</strong>.
+            </p>
+        </div>
+        <section class="bg-custom-dark order-summary negative-margin skewed vh-50 py-5 mt-5">
+            <div class="container no-skew my-5">
+                <div class="row h-100 ">
+                    <div class="col-12 col-lg-7">
+                        
+                    </div>
+                    <div class="row w-100 justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8 text-center">
+                            <p class="lead text-white">
+                                Now check your profile page and start watching!
+                            </p>
+                            <a href="{% url 'courses' %}" class="btn btn-black bg-white rounded-pill border-black">
+                                <span class="icon">
+                                    <i class="text-black fas fa-chevron-left"></i>
+                                </span>
+                                <span class="font-weight-bold text-black">My Profile</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div> 
+{% endblock %}
