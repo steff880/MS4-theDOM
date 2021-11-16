@@ -307,29 +307,6 @@ ul {
     overflow-wrap: break-word;
 }
 
-#loading-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #21252967;
-    z-index: 9999;
-}
-
-.loading-spinner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
-}
-
-.loading-spinner .icon i {
-    font-size: 5.5rem;
-}
-
 /* remove arrows from input type number */
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 
