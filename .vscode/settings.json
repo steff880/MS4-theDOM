@@ -33,6 +33,7 @@
       "--disable=imported-auth-user",
       "--disable=invalid-name",
       "--disable=too-many-ancestors",
+      "--disable=broad-except",
   ],
   "python.linting.ignorePatterns": [
    "**/site-packages/**/*.py",
