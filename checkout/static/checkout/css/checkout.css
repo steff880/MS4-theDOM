@@ -5,7 +5,8 @@
 
 /*
   The CSS Styles were taken from Stripe documentation,
-  and the Code Institute, Boutique Ado Project.
+  and the Code Institute, Boutique Ado Project and slightly customized
+  to fit project needs.
 */
 
 .StripeElement,
@@ -44,6 +45,16 @@
 #card-element {
     color: #212529;
     border: 1px solid #21252960;
+}
+
+select,
+select option {
+    color: #212529;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
 }
 
 #loading-overlay {
