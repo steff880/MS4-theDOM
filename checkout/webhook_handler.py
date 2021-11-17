@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 from courses.models import Course
 from .models import Order, OrderLineItem
+from profiles.models import UserProfile
 
 
 class StripeWH_Handler:
@@ -34,6 +35,17 @@ class StripeWH_Handler:
         billing_details = intent.charges.data[0].billing_details
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
+        # Update profile information if save_info was checked
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_full_name = billing_details.name
+                profile.default_email = billing_details.email
+                profile.default_phone_number = billing_details.phone
+                profile.default_country = billing_details.address.country
+                profile.save()
+
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -63,6 +75,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=billing_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=billing_details.phone,
                     country=billing_details.address.country,
