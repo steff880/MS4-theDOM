@@ -1,0 +1,22 @@
+Hello {{order.full_name }}!
+
+This is a confirmation email for your order at TheDOM. Your order details can be found below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Discount: ${{ order.discount}}
+Grand Total: ${{ order.grand_total }}
+
+You can now find course video/s on your Profile page!
+
+We have your contact number on record as {{ order.phone_number }}.
+
+If you have any questions, please feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Kind Regards,
+
+TheDOM.
