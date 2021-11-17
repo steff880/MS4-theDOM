@@ -35,15 +35,24 @@
         </div>
         <div class="row w-100 justify-content-center my-5 pb-5">
             <div class="col-12 col-md-10 col-lg-8 text-center">
-                <p class="lead text-black">
-                    Now check your profile page and start watching!
-                </p>
-                <a href="{% url 'courses' %}" class="btn btn-black bg-white rounded-pill border-black">
-                    <span class="icon">
-                        <i class="text-black fas fa-chevron-left"></i>
-                    </span>
-                    <span class="font-weight-bold text-black">My Profile</span>
-                </a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black bg-white rounded-pill border-black">
+                        <span class="icon">
+                            <i class="text-black fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold text-black">Go Back</span>
+                    </a>
+                {% else %}
+                    <p class="lead text-black">
+                        Now check your profile page and start watching!
+                    </p>
+                    <a href="{% url 'profile' %}" class="btn btn-black bg-white rounded-pill border-black">
+                        <span class="icon">
+                            <i class="text-black fas fa-chevron-left"></i>
+                        </span>
+                        <span class="font-weight-bold text-black">My Profile</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
         <section class="bg-custom-dark order-summary negative-margin skewed vh-50 py-5 mt-5">
