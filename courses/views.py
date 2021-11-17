@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Course, Category
+from .forms import CourseForm
 
 
 def all_courses(request):
@@ -75,3 +76,15 @@ def course_detail(request, course_id):
     }
 
     return render(request, 'courses/course_detail.html', context)
+
+
+def add_course(request):
+    """ Add a course to the store """
+
+    form = CourseForm
+    template = 'courses/add_course.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
