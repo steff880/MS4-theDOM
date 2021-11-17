@@ -341,11 +341,11 @@ input[type=number] {
     }
 
     .header-container {
-        padding-top: 90px;
+        padding-top: 119px;
     }
 
     body {
-        height: calc(100vh - 90px);
+        height: calc(100vh - 119px);
     }
 }
 
