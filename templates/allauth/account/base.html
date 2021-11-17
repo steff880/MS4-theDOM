@@ -1,1 +1,14 @@
 {% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid min-vh-100 header-container mb-3">
+    <div class="row mt-5 mt-md-1 justify-content-center align-items-center">
+        <div class="col-12 col-md-7 col-xl-4">
+            <div class="allauth-form-inner-content">
+                {% block inner_content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
