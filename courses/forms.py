@@ -15,4 +15,5 @@ class CourseForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black border-radius-sm'
+            field.widget.attrs['class'] = (
+                'border-dark shadow-sm border-radius-sm')
