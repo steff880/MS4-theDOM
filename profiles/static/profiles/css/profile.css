@@ -1,3 +1,8 @@
+.order-history {
+    max-height: 300px; /* height of profile form + submit button */
+    overflow: auto;
+}
+
 .profile-form-input .form-control {
     color: #212529;
 }
