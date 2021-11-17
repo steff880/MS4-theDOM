@@ -307,6 +307,10 @@ ul {
     overflow-wrap: break-word;
 }
 
+input[name="q"]::placeholder {
+    color: #aab7c4;
+}
+
 /* remove arrows from input type number */
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 
@@ -320,6 +324,27 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    color: #212529;
+}
+
+.allauth-form-inner-content input {
+    border-color: #21252960;
+    border-radius: 10px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display:none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
 }
 
 /* Media Queries */
