@@ -15,27 +15,23 @@
 {% endblock %}
 
 {% block content %}
-   <div class="container py-3 mb-2">
+    <div class="container py-3 mb-2">
         <div class="row justify-content-center mt-5">
             <div class="col-12 text-center">
                 <div class="text-black">
                     <div><i class="fas fa-user-alt large-icon rotate"></i></div>
                 </div>
-                <h1 class="font-weight-bold text-black">My Profile</h2>
+                <h1 class="font-weight-bold text-black">My Profile</h1>
             </div>
             <div class="col-6 my-5">
                 <hr class="bg-dark custom-divider">
             </div>
         </div>
-       
-	</div> 
-    
+    </div>
+
 {% endblock %}
 
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+
 {% endblock %}
