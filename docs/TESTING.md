@@ -36,3 +36,14 @@ When testing to see the order after checkout in admin panel, realized that **dis
 - Fix:
 
 Change code to apply the discount only when the **total** is **_greater_** than **discount threshold**
+
+- Bug:
+
+When testing adding a course without image and try to access it it throws the error below. The reason is that on Course Detail page the link for couuse without image was wrong, and points to a non-existing image.
+
+![Bag Bug](/docs/images/no-image-bug.png)
+![Bag Bug](/docs/images/no-image-bug1.png)
+
+- Fix:
+
+Add {{ MEDIA_URL }}noimage.png in the _href_ attribute of the link.
