@@ -79,13 +79,13 @@
                                     <div
                                         class="card bg-custom-dark border-0 border-radius-lg overflow-x-hidden box-shadow h-100">
                                         {% if course.image %}
-                                        <a class="text-center pt-4" href="{% url 'course_detail' course.id %}">
-                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                        <a class="p-4" href="{% url 'course_detail' course.id %}">
+                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med"
                                                 src="{{ course.image.url }}" alt=" {{ course.name }}">
                                         </a>
                                         {% else %}
-                                        <a href="{% url 'course_detail' course.id %}">
-                                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                                        <a class="p-4" href="{% url 'course_detail' course.id %}">
+                                            <img class="card-img-top img-fluid border-radius-med"
                                                 src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
                                         </a>
                                         {% endif %}

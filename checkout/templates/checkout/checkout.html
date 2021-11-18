@@ -40,10 +40,10 @@
                 </div>
                 {% for item in bag_items %}
                     <div class="row">
-                        <div class="col-2 mb-1">
-                            <a href="{% url 'course_detail' item.course.id %}">
+                        <div class="col-2 mb-2">
+                            <a class="p-2" href="{% url 'course_detail' item.course.id %}">
                                 {% if item.course.image %}
-                                    <img class="w-100 bg-custom-white border-radius-med p-2"
+                                    <img class="w-100 bg-custom-white border-radius-sm"
                                         src="{{ item.course.image.url }}" alt="{{ course.name }}">
                                 {% else %}
                                     <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">

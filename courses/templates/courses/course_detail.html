@@ -15,13 +15,13 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container text-center my-5">
                     {% if course.image %}
-                        <a class="pt-4" href="{{ course.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                        <a class="p-4" href="{{ course.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid bg-custom-white border-radius-med w-75"
                                 src="{{ course.image.url }}" alt=" {{ course.name }}">
                         </a>
                     {% else %}
-                        <a class="pt-4" href="{{ course.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid bg-custom-white border-radius-med py-3 w-75"
+                        <a class="p-4" href="{{ MEDIA_URL }}noimage.png" target="_blank">
+                            <img class="card-img-top img-fluid border-radius-med w-75"
                                 src="{{ MEDIA_URL }}noimage.png" alt=" {{ course.name }}">
                         </a>
                     {% endif %}
