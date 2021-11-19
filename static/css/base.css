@@ -428,9 +428,6 @@ input[type=number] {
         margin-right: -30px;
     }
 
-    .nav-link {
-        padding: 0.6rem;
-    }
 }
 
 
@@ -486,6 +483,10 @@ input[type=number] {
 
     .dropdown-menu {
         font-size: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 0.6rem;
     }
 
 }
