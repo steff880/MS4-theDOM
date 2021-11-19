@@ -103,7 +103,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-12 col-md-10 col-lg-6 offset-lg-3">
+            <div class="col-12 col-md-10 col-lg-6 offset-lg-3 mb-5">
                 <div class="course-description-container">
                     <h2 class="text-black mt-5">Description</h2>
                     <p class="text-black lead mt-2 text-left mt-5">
@@ -112,6 +112,33 @@
                 </div>
             </div>
         </div>
+         <!-- Product Reviews-->
+        <section class="reviews bg-custom-dark negative-margin skewed mt-5 pb-5">
+            <div class="container no-skew">
+                <div id="reviews" class="row justify-content-center mb-5">
+                    <div class="col-12 col-md-10 col-lg-6 mt-5">
+                        <div class="text-white text-center">
+                            <div><i class="far fa-star large-icon"></i></div>
+                        </div>
+                        <h3 class="text-white text-center font-weight-bold mt-3 mb-3">Reviews</h3>
+                        <div class="col-8 mx-auto my-5">
+                            <hr class="bg-white custom-divider-sm">
+                        </div>
+                        {% if request.user.is_authenticated %}
+                        <!--Review Form -->
+                        <form id="review-form" class="border-radius-sm" method="POST" action="{% url 'add_review' course.id %}#reviews">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <div class="text-right mt-4">
+                                <button class="btn btn-black rounded-pill box-shadow text-center font-weight-bold"
+                                    type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Delete course modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">

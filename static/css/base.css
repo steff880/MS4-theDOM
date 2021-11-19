@@ -137,6 +137,11 @@ ul {
     transform: skewY(3deg);
 }
 
+.custom-divider-sm {
+    height: 4px;
+    border-radius: 50%;
+}
+
 .custom-divider {
     height: 7px;
     border-radius: 50%;
@@ -310,6 +315,16 @@ ul {
 input[name="q"]::placeholder {
     color: #aab7c4;
 }
+
+#review-form label {
+    color: #6c757d; /* same as bootstrap text-muted class */
+    font-weight: 600;
+}
+
+#review-form .form-control {
+    border-radius: 10px;
+}
+
 
 /* remove arrows from input type number */
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
