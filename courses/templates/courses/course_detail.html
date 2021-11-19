@@ -112,7 +112,9 @@
                 </div>
             </div>
         </div>
-         <!-- Product Reviews-->
+        <!-- Ref: https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/products/templates/products/product_detail.html -->
+        <!-- Code from obove link and modified to fit project needs -->
+         <!-- Course Reviews-->
         <section class="reviews bg-custom-dark negative-margin skewed mt-5 pb-5">
             <div class="container no-skew">
                 <div id="reviews" class="row justify-content-center mb-5">
@@ -126,7 +128,7 @@
                         </div>
                         {% if request.user.is_authenticated %}
                         <!--Review Form -->
-                        <form id="review-form" class="border-radius-sm" method="POST" action="{% url 'add_review' course.id %}#reviews">
+                        <form id="review-form" method="POST" action="{% url 'add_review' course.id %}#reviews">
                             {% csrf_token %}
                             {{ form|crispy }}
                             <div class="text-right mt-4">
@@ -137,6 +139,26 @@
                         {% endif %}
                     </div>
                 </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-12 col-md-10 col-lg-6">  
+                        <!-- Showing all course reviews-->
+                        {% for review in course.reviews.all %}
+                            <div class="card review-container bg-custom-dark box-shadow border-radius-med mt-5">
+                                <div class="card-body text-white">
+                                    <p class="small"> by {{ review.user }} on {{ review.date_added|date:"d-m-Y"}}</p>
+                                    <p class="card-title">{{ review.title }}<i class="ml-5 fas fa-star"></i>
+                                        {{ review.rating }}/5</p>
+                                    <p class="card-text lead">{{ review.content }}</p>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="text-center text-white my-5">
+                                <p>Currently there are no reviews for this course.</p>
+                                <p>Hurry up and be the first!</p>
+                            </div>
+                        {% endfor%}
+                    </div>
+                </div> 
             </div>
         </section>
         <!-- Delete course modal -->
