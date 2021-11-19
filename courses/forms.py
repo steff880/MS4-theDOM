@@ -1,6 +1,13 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Course, Category
+from .models import Course, Category, CourseReview
+
+
+class ReviewForm(forms.ModelForm):
+
+    class Meta:
+        model = CourseReview
+        fields = ('title', 'content', 'rating')
 
 
 class CourseForm(forms.ModelForm):
@@ -18,6 +25,6 @@ class CourseForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-        for field_name, field in self.fields.items():
+        for field in self.fields.items():
             field.widget.attrs['class'] = (
                 'shadow-sm border-radius-sm')
