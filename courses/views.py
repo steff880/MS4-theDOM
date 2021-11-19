@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Course, Category
-from .forms import CourseForm
+from .forms import CourseForm, ReviewForm
 
 
 def all_courses(request):
@@ -71,12 +71,42 @@ def course_detail(request, course_id):
     A view to show individual course details
     """
     course = get_object_or_404(Course, pk=course_id)
+    form = ReviewForm()
 
     context = {
         'course': course,
+        'form': form,
     }
 
     return render(request, 'courses/course_detail.html', context)
+
+
+@login_required
+def add_review(request, course_id):
+    """
+    A view to allow the user to add a review to a course
+    """
+
+    course = get_object_or_404(Course, pk=course_id)
+
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.course = course
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Your review was successful')
+                return redirect(reverse('course_detail', args=[course.id]))
+            else:
+                messages.error(
+                    request, 'Failed to add your review')
+    context = {
+        'form': form
+    }
+
+    return render(request, context)
 
 
 @login_required
