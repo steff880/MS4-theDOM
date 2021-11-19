@@ -141,6 +141,7 @@ def edit_review(request, review_id):
         'course': course,
         'edit': True,
     }
+
     return render(request, template, context)
 
 
@@ -210,6 +211,10 @@ def delete_course(request, course_id):
         return redirect(reverse('home'))
 
     course = get_object_or_404(Course, pk=course_id)
+    # Store all reviews for course
+    reviews = course.reviews.all()
     course.delete()
+    # Delete reviews after course is deleted
+    reviews.delete()
     messages.success(request, 'Course deleted!')
     return redirect(reverse('courses'))
