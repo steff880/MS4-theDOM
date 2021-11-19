@@ -127,15 +127,26 @@
                             <hr class="bg-white custom-divider-sm">
                         </div>
                         {% if request.user.is_authenticated %}
-                        <!--Review Form -->
-                        <form id="review-form" method="POST" action="{% url 'add_review' course.id %}#reviews">
-                            {% csrf_token %}
-                            {{ form|crispy }}
-                            <div class="text-right mt-4">
-                                <button class="btn btn-black rounded-pill box-shadow text-center font-weight-bold"
-                                    type="submit">Submit Review</button>
-                            </div>
-                        </form>
+                            {% if edit %}
+                            <!-- Edit Review Form -->
+                                <form method="POST" action="{% url 'edit_review' review.id %}#reviews">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    <div class="text-right">
+                                        <button class="btn btn-info font-weight-bold" type="submit">Update Review</button>
+                                    </div>
+                                </form>
+                            {% else %}
+                            <!--Review Form -->
+                            <form id="review-form" method="POST" action="{% url 'add_review' course.id %}#reviews">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <div class="text-right mt-4">
+                                    <button class="btn btn-black rounded-pill box-shadow text-center font-weight-bold"
+                                        type="submit">Submit Review</button>
+                                </div>
+                            </form>
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
@@ -151,6 +162,15 @@
                                     <p class="card-text lead">{{ review.content }}</p>
                                 </div>
                             </div>
+                             <!-- Edit Review Button-->
+                            {% if review.user == request.user or request.user.is_superuser %}
+                            <div class="text-right mt-3">
+                                <a class="btn btn-black-sm border-radius-med box-shadow"
+                                    href="{% url 'edit_review' review.id %}#reviews">
+                                    Edit Review
+                                </a>
+                            </div>
+                            {% endif %}
                         {% empty %}
                             <div class="text-center text-white my-5">
                                 <p>Currently there are no reviews for this course.</p>
