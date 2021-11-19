@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Course, Category
+from .models import Course, Category, CourseReview
 from .forms import CourseForm, ReviewForm
 
 
@@ -81,6 +81,8 @@ def course_detail(request, course_id):
     return render(request, 'courses/course_detail.html', context)
 
 
+# https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/products/views.py
+# Code for reviews from above link
 @login_required
 def add_review(request, course_id):
     """
@@ -107,6 +109,39 @@ def add_review(request, course_id):
     }
 
     return render(request, context)
+
+
+@login_required
+def edit_review(request, review_id):
+    """
+    A view to allow the users to edit their own review
+    """
+
+    review = get_object_or_404(CourseReview, pk=review_id)
+    course = review.course
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'Review has been changed')
+            return redirect(reverse('course_detail', args=[course.id]))
+        else:
+            messages.error(
+                request, 'Review edit failed, Please try again')
+
+    else:
+        form = ReviewForm(instance=review)
+
+    messages.info(request, 'You are editing your review')
+    template = 'courses/course_detail.html'
+    context = {
+        'form': form,
+        'review': review,
+        'course': course,
+        'edit': True,
+    }
+    return render(request, template, context)
 
 
 @login_required
