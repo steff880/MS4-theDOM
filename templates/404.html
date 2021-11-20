@@ -29,6 +29,41 @@
                     <span class="text-uppercase font-weight-bold text-black">Home</span>
                 </a>
             </div>
-        </div>
+        </div>{% extends 'base.html' %}
+        {% load static %}
+        
+        {% block page_header %}
+            <div class="container header-container">
+                <div class="row">
+                    <div class="col"></div>
+                </div>
+            </div>
+        {% endblock %}
+        
+        {% block content %}
+            <div class="container-fluid min-vh-100">
+                <div class="row justify-content-center mt-5">
+                    <div class="col text-center mt-3">
+                        <h1 class=" text-uppercase text-center text-black mt-5">
+                            Error 404
+                        </h1>
+                    </div>
+                    <div class="col-6 my-5">
+                        <hr class="bg-dark custom-divider">
+                    </div>
+                    <div class="col-12 text-center">
+                        <h3 class="text-black font-weight-bold text-center mt-4">
+                            Ooops, looks like you end up in the wrong place!
+                        </h3>
+                        <a class="btn btn-black bg-white border-black rounded-pill mt-5" href="{% url 'home' %}">
+                            <span class="icon">
+                                <i class="text-black fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase font-weight-bold text-black">Home</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
     </div>
 {% endblock %}
