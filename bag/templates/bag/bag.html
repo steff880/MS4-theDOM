@@ -44,6 +44,7 @@
                         <p class="my-0 mt-2"><strong>${{ item.course.price }}</strong></p>
                         <form class="form update-form mt-5" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                             {% csrf_token %}
+                            <p class="value-error text-danger small"></p>
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend custom-input-group-prepend">
@@ -56,7 +57,7 @@
                                     </div>
                                     <input
                                         class="form-control form-control-sm qty_input text-black text-center rounded-pill"
-                                        type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                        type="number" name="quantity" value="{{ item.quantity }}" min="1" max="2"
                                         data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                     <div class="input-group-append custom-input-group-append">
                                         <button class="increment-qty btn btn-sm" data-item_id="{{ item.item_id }}"
@@ -130,7 +131,15 @@
 	//Update course quantity on update click
 	$('.update-link').click(function(e) {
 		var form = $(this).prev('.update-form');
-		form.submit();
+        var qtyInput = form.find('.qty_input')[0];
+        var maxValue = qtyInput.max = 2;
+        if (qtyInput.value > maxValue) {
+            e.preventDefault();
+            errorEl = form.find('.value-error')[0];
+            errorEl.innerHTML = 'Please ensure the maximum quantity is not higher than 2';
+        } else {
+            form.submit();
+        }
 	});
 
 	//Remove course from bag on remove click and reload page

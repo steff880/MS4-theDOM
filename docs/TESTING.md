@@ -58,3 +58,15 @@ Created new model and run migrations. It worked locally but seemed like the new 
 - Fix:
 
 Had a _Tutor Assistance_ and was suggested to create environmental variable in gitpod called **DATABASE_URL**, which value was the _url_ for **Postgres** and set **DEBUG** to false. Stop the workspace and start it again. After doing this, in the _terminal_ was a message that I need to run migrations to **Postgres**. I used the command `python3 manage.py migrate --plan`, which showed everything that needs to be migrated. Confirmed that it is correct and run `python3 manage.py migrate`. Then when I reloaded the deployed site all worked normally.
+
+
+
+## Known Issues
+
+ When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
+
+Unfortunately when I relized it, was already too late to make big changes, due to really being pressed by the time, so I came up with the idea to disable the form submission if the maximum value is more than 2. Also disable the +/- buttons as well following the same logic. Also I did not want to start deleting code and end up breaking something, close to submission of my project. At least now user will not be able to purchase 99 courses. I know this solution is not the best, but it was all I was able to do at that point.
+
+This issue will be fixed in future updates.
+
+![Bag Bug](/docs/images/course-value-issue.png)

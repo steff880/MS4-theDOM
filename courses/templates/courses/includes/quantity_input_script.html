@@ -2,11 +2,11 @@
 <!-- and https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/products/templates/products/includes/quantity_input_script.html -->
 
 <script>
-    // Disable +/- buttons outside 1-99 range
+    // Disable +/- buttons outside 1-2 range
     function handleEnableDisable(itemId) {
         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
+        var plusDisabled = currentValue > 1;
         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
