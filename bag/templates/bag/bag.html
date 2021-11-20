@@ -127,13 +127,13 @@
 {{ block.super }}
 {% include 'courses/includes/quantity_input_script.html' %}
 <script>
-	//Update product quantity on update click
+	//Update course quantity on update click
 	$('.update-link').click(function(e) {
 		var form = $(this).prev('.update-form');
 		form.submit();
 	});
 
-	//Remove product from bag on remove click and reload page
+	//Remove course from bag on remove click and reload page
 	$('.remove-item').click(function(e) {
 		var csrfToken = "{{ csrf_token }}";
 		var itemId = $(this).attr('id').split('remove_')[1];
