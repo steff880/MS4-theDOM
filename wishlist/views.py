@@ -42,3 +42,19 @@ def add_to_wishlist(request, course_id):
     messages.info(request, "A new course was added to your wishlist")
 
     return redirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def remove_from_wishlist(request, course_id):
+    """
+    Add a course from the store to the
+    wishlist for the logged in user
+    """
+    wishlist = WishList.objects.get(user=request.user)
+    course = get_object_or_404(Course, pk=course_id)
+
+    # Remove course from the wishlist
+    wishlist.courses.remove(course)
+    messages.info(request, "A course was removed from your wishlist")
+
+    return redirect(request.META.get('HTTP_REFERER'))
