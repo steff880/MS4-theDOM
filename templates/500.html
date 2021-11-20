@@ -11,22 +11,22 @@
 
 {% block content %}
     <div class="container-fluid min-vh-100">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5">
             <div class="col text-center mt-3">
-                <h1 class=" text-uppercase text-center text-black">
+                <h1 class=" text-uppercase text-center text-black mt-5">
                     Error 500
                 </h1>
-                <div class="col-6 my-5">
+                <div class="col-6 my-5 text-center">
                     <hr class="bg-dark custom-divider">
                 </div>
                 <h3 class="text-black font-weight-bold text-center mt-4">
                     Ooops, something has gone wrong. Please try again later!
                 </h3>
-                <a class="btn btn-black rounded-pill mt-5" href="{% url 'home' %}">
+                <a class="btn btn-black bg-white border-black rounded-pill mt-5" href="{% url 'home' %}">
                     <span class="icon">
-                        <i class="text-white fas fa-chevron-left"></i>
+                        <i class="text-black fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase font-weight-bold text-white">Home</span>
+                    <span class="text-uppercase font-weight-bold text-black">Home</span>
                 </a>
             </div>
         </div>
