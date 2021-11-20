@@ -63,11 +63,11 @@
                         </span>
 						<span class="text-white">Course Details</span>
 					</a>
-					<a class="btn btn-black rounded-pill box-shadow mt-3" href="">
-                        <span class="icon">
-                            <i class="text-white fas fa-trash-alt fa-sm"></i>
-                        </span>
-						<span class="text-white">Remove from wishlist</span>
+					<a class="btn btn-black rounded-pill box-shadow mt-3" href="{% url 'remove_from_wishlist' course.id %}">
+					    <span class="icon">
+					        <i class="text-white fas fa-trash-alt fa-sm"></i>
+					    </span>
+					    <span class="text-white">Remove from wishlist</span>
 					</a>
 				</div>
 			</div>
