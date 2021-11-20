@@ -26,7 +26,7 @@
     </div>
 
     {% for course in wishlist.courses.all %}
-        <div class="row justify-content-center px-2">
+        <div class="row justify-content-center px-2 pb-5">
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="image-container text-center my-5">
                     {% if course.image %}
@@ -44,11 +44,11 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
 				<div class="course-detail my-5">
-					<h3 class="mb-4 pt-md-5 text-black font-weight-bold"> {{ course.name }}</h3>
-					<h4 class="text-black lead mb-2 text-left font-weight-bold">${{ course.price }}</h4>
+					<h3 class="mb-4 pt-md-5 text-white font-weight-bold"> {{ course.name }}</h3>
+					<h4 class="text-white lead mb-2 text-left font-weight-bold">${{ course.price }}</h4>
 					{% if course.category %}
 					<p class="small">
-						<a class="text-muted text-black font-weight-bold"
+						<a class="text-white font-weight-bold"
 							href="{% url 'courses' %}?category={{ course.category.name }}">
 							<i class="fas fa-tag"></i> {{ course.category.friendly_name }}
 						</a>
@@ -56,11 +56,17 @@
 					{% endif %}
 				</div>
 				<!-- Buttons -->
-				<div class="text-center">
+				<div class="text-left">
 					<a class="btn btn-black rounded-pill box-shadow mt-3" href="{% url 'course_detail' course.id %}">
+                        <span class="icon">
+                            <i class="text-white fas fa-chevron-left"></i>
+                        </span>
 						<span class="text-white">Course Details</span>
 					</a>
 					<a class="btn btn-black rounded-pill box-shadow mt-3" href="">
+                        <span class="icon">
+                            <i class="text-white fas fa-trash-alt fa-sm"></i>
+                        </span>
 						<span class="text-white">Remove from wishlist</span>
 					</a>
 				</div>
