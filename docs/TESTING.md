@@ -47,3 +47,14 @@ When testing adding a course without image and try to access it it throws the er
 - Fix:
 
 Add {{ MEDIA_URL }}noimage.png in the _href_ attribute of the link.
+
+- Bug:
+
+Created new model and run migrations. It worked locally but seemed like the new model was not migrated to **Postgres**. Which resulted in this error.
+
+![Bag Bug](/docs/images/migrations-postgres.png)
+
+
+- Fix:
+
+Had a _Tutor Assistance_ and was suggested to create environmental variable in gitpod called **DATABASE_URL**, which value was the _url_ for **Postgres** and set **DEBUG** to false. Stop the workspace and start it again. After doing this, in the _terminal_ was a message that I need to run migrations to **Postgres**. I used the command `python3 manage.py migrate --plan`, which showed everything that needs to be migrated. Confirmed that it is correct and run `python3 manage.py migrate`. Then when I reloaded the deployed site all worked normally.
