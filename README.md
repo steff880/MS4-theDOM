@@ -177,6 +177,14 @@ When the user goes to the Checkout page, there is information about their order,
 
 ![Checkout](/docs/images/checkout-page.png)
 
+#### Features Left to Implement
+
+- Add more courses like MongoDB, SQL etc.
+
+- Add a blog app
+
+- Add bundles option
+
 ## **Technologies Used**
 
 - [Python](https://www.python.org/) 
