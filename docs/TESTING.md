@@ -139,6 +139,40 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 - Click each footer icon to confirm relevant social media page opens in a new window
     - Pass
 
+
+### Search Bar
+
+- Confirm search for "Web" displays courses containing the word either in their name ot description 
+
+    - Pass
+
+- Confirm the display of correct information about the search
+    
+    - As expected, from the previous test the display was **_6 Courses found for "web"_**
+
+
+### Home Page
+
+- On page load, confirm animation of the text showing from the right and the CTA button pops up 
+
+    - Pass
+
+- Confirm Explore Courses cta button displays Courses page showing all courses
+
+    - Pass
+
+
+- Confirm scrolling down the page triggers text fade in from the right 
+
+    - Pass
+
+- Confirm hovering over buttons triggers hover effects 
+
+    - Pass
+
+
+
+
 ## Known Issues
 
  When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
