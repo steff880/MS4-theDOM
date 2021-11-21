@@ -98,7 +98,7 @@ I would like to:
 
 ## Testing
 
-
+[All Testing](https://github.com/steff880/MS4-theDOM/blob/main/docs/TESTING.md)
 
 [^ back to top ^](#table-of-contents)
 
