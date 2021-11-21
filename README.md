@@ -177,18 +177,69 @@ When the user goes to the Checkout page, there is an information about their ord
 
 ![Checkout](/docs/images/checkout-page.png)
 
-## Technologies Used
-### Languages
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+## **Technologies Used**
+
+- [Python](https://www.python.org/) 
+    - The following Python modules were used on this project, 
+        - asgiref==3.4.1
+        - boto3==1.18.26
+        - botocore==1.21.26
+        - dj-database-url==0.5.0
+        - Django==3.2.5
+        - django-allauth==0.41.0
+        - django-countries==7.2.1
+        - django-crispy-forms==1.12.0
+        - django-embed-video==1.4.0
+        - django-storages==1.11.1
+        - gunicorn==20.1.0
+        - jmespath==0.10.0
+        - oauthlib==3.1.1
+        - Pillow==8.3.1
+        - psycopg2-binary==2.9.1
+        - pylint-django==2.4.4
+        - pylint-plugin-utils==0.6
+        - python3-openid==3.2.0
+        - pytz==2021.1
+        - requests-oauthlib==1.3.0
+        - s3transfer==0.5.0
+        - sqlparse==0.4.1
+        - stripe==2.60.0
+
+- [Heroku Postgres](https://www.heroku.com/postgres)
+
+- [AWS S3](https://aws.amazon.com/)
+ 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+
+- [Bootstrap](https://getbootstrap.com/)
+
+- [jQuery](https://jquery.com/)
+
+- [JavaScript](https://www.javascript.com/)
+
+- [Google Fonts](https://fonts.google.com/)
+
+- [Font Awesome](https://fontawesome.com/)
+
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+
+- [Github](https://github.com/)
+
+- [Git](https://git-scm.com/)
+
+- [Gitpod](https://www.gitpod.io/)
+
+- [Balsamiq](https://balsamiq.com/)
+
+- [AutoPrefixer](https://autoprefixer.github.io/)
+
+- [Grammarly](https://www.grammarly.com/)
+
 ---
 
 [^ back to top ^](#table-of-contents)
-
-### Frameworks, Libraries & Programs Used
-
 
 ## Testing
 
