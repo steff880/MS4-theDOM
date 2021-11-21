@@ -136,6 +136,33 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 ![Info](/docs/images/about2.png)
 
 
+#### Courses
+
+- Offers the user a choice of web development courses with categories of Frontend and Backend
+
+
+![Courses](/docs/images/courses.png)
+
+#### Search
+
+- Users can take advantage of the search bar and search for courses by name or description
+
+
+#### Reviews
+
+- Users who have created an account can take advantage and leave reviews for courses
+
+![Review](/docs/images/reviews.png)
+![Review](/docs/images/review-post.png)
+
+
+#### Toasts
+
+Toasts are used to provide the user with a information when they perform a certain action on the website.
+Like adding courses to the bag, or writing a reviews, etc.
+
+![Review](/docs/images/toasts.png)
+
 
 ## Technologies Used
 ### Languages
