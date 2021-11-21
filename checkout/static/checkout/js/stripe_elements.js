@@ -27,7 +27,7 @@ var style = {
         color: '#dc3545',
         iconColor: '#dc3545'
     }
-}
+};
 
 var card = elements.create('card', {
     style: style
@@ -109,5 +109,5 @@ form.addEventListener('submit', function (ev) {
     }).fail(function() {
         // just reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });

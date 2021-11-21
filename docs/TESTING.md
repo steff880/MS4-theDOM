@@ -91,3 +91,8 @@ no syntax errors in the project.
 ![CSS](/docs/images/w3c-css.png)
 ![CSS](/docs/images/w3c-css-bs.png)
 ![CSS](/docs/images/w3c-css-vendor.png)
+
+
+### [JSHint](https://jshint.com/)
+
+All code found valid. Few warnings for Jquery _$_ sign.
