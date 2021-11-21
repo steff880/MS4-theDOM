@@ -237,6 +237,8 @@ When the user goes to the Checkout page, there is an information about their ord
 
 - [Grammarly](https://www.grammarly.com/)
 
+- [Favicon Generator](https://realfavicongenerator.net/)
+
 ---
 
 [^ back to top ^](#table-of-contents)
