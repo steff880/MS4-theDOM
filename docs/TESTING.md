@@ -17,8 +17,8 @@ Change the variable _**product_count**_ to _**course_count**_ and append the _**
 While testing the **Shopping bag page**, noticed that the **bag total** was not calculated properly. 
 Instead of multiplying the _**quantity**_ by the _**price**_, it was adding the _**quantity**_ to the _**price**_.
 
-![Bag Bug](/docs/images/bag-total-bug.png)
-![Bag Bug](/docs/images/bag-total-bug1.png)
+![Bag total](/docs/images/bag-total-bug.png)
+![Bag total](/docs/images/bag-total-bug1.png)
 
 - Fix:
 
@@ -30,8 +30,8 @@ Issue calculating the **order total** correctly.
 
 When testing to see the order after checkout in admin panel, realized that **discount** is applied to orders _below_ the threshold ($30).
 
-![Bag Bug](/docs/images/order-total-discount-bug.png)
-![Bag Bug](/docs/images/order-total-discount-bug1.png)
+![Order total](/docs/images/order-total-discount-bug.png)
+![Order total](/docs/images/order-total-discount-bug1.png)
 
 - Fix:
 
@@ -41,8 +41,8 @@ Change code to apply the discount only when the **total** is **_greater_** than 
 
 When testing adding a course without image and try to access it it throws the error below. The reason is that on Course Detail page the link for couuse without image was wrong, and points to a non-existing image.
 
-![Bag Bug](/docs/images/no-image-bug.png)
-![Bag Bug](/docs/images/no-image-bug1.png)
+![No image](/docs/images/no-image-bug.png)
+![No image](/docs/images/no-image-bug1.png)
 
 - Fix:
 
@@ -52,7 +52,7 @@ Add {{ MEDIA_URL }}noimage.png in the _href_ attribute of the link.
 
 Created new model and run migrations. It worked locally but seemed like the new model was not migrated to **Postgres**. Which resulted in this error.
 
-![Bag Bug](/docs/images/migrations-postgres.png)
+![Migrations](/docs/images/migrations-postgres.png)
 
 
 - Fix:
@@ -69,4 +69,16 @@ Unfortunately when I relized it, was already too late to make big changes, due t
 
 This issue will be fixed in future updates.
 
-![Bag Bug](/docs/images/course-value-issue.png)
+![Course value](/docs/images/course-value-issue.png)
+
+
+### W3C Validator Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were
+no syntax errors in the project.
+
+[W3C Markup Validator](https://validator.w3.org/)
+
+- One error and one warning was found for a duplicate ID used. The reason for thisis that there is a second file for mobile-top-navigation and it contains the same code as the one on the **base template**. It does not affect the functionality of the website.
+
+![W3C Markup Validator](/docs/images/w3c-markup.png)
