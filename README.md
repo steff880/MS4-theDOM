@@ -446,6 +446,28 @@ pip3 freeze > requirements.txt
 
 ### Images
 
+[Flask Logo](https://www.cleanpng.com/png-flask-python-web-framework-web-application-america-5227332/)
+
+[Django Logo](https://www.pngwing.com/en/free-png-hwwqg)
+
+[JavaScript Logo](https://www.cleanpng.com/png-javascript-node-js-logo-computer-programming-progr-2052076/)
+
+[CSS Logo](https://www.cleanpng.com/png-web-development-cascading-style-sheets-css3-html-1615602/)
+
+[Python Logo](https://www.cleanpng.com/png-angle-text-symbol-brand-other-python-622381/)
+
+[HTML Logo](https://brandslogos.com/h/html-logo/)
+
+[React Logo](https://www.pngwing.com/en/free-png-cgbgg)
+
+- All SVG illustrations from:
+
+[unDraw](https://undraw.co/illustrations)
+
+The site does not allow to get individual liks for the illustrations.
+
+All illustrations can be found on the link above.
+
 
 [^ back to top ^](#table-of-contents)
 
