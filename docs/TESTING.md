@@ -62,6 +62,82 @@ Created new model and run migrations. It worked locally but seemed like the new 
 Had a _Tutor Assistance_ and was suggested to create environmental variable in gitpod called **DATABASE_URL**, which value was the _url_ for **Postgres** and set **DEBUG** to false. Stop the workspace and start it again. After doing this, in the _terminal_ was a message that I need to run migrations to **Postgres**. I used the command `python3 manage.py migrate --plan`, which showed everything that needs to be migrated. Confirmed that it is correct and run `python3 manage.py migrate`. Then when I reloaded the deployed site all worked normally.
 
 
+## Manual Testing
+
+The following tests have been carried out without issue:
+
+### Sign in and Out
+
+- Confirm clicking Login or Sign Out from the Account tab signs the user out and displays a confirmation message
+
+    - Pass
+
+### Navigation
+
+- Click TheDOM logo to go back to Home page
+
+    - Pass
+
+- Click All Courses displays all courses
+
+    - Pass
+
+- Click Frontend displays only frontend courses
+
+    - Pass
+
+- Click Backend displays only Backend courses
+
+    - Pass
+
+- Click My Account (logged out) to confirm only options Register and Login are displayed
+
+    - Pass
+
+- Click My Account (logged in as Registered user) to confirm only options My Profile and Logout are displayed
+
+    - Pass
+
+- Click My Account (logged in as Superuser) to confirm options Manage Courses, My Profile and Logout are displayed
+
+    - Pass
+
+- Click Wishlist or Heart on mobile (logged out) to confirm redirect to Sign In page
+
+    - Pass
+
+- Click Wishlist or Heart on mobile (logged in as Registered user) to confirm Wishlist page is displayed
+
+    - Pass
+
+- Click Bag (logged out) to confirm redirect to Sign In page
+
+    - Pass
+
+Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
+    - Pass
+
+- Reduce horizontal screen width to 991px to confirm hamburger icon replaces main nav items
+
+    - Pass
+
+
+- Reduce horizontal screen width to 991px to confirm are Home, Search, User, Heart, and Bag icons are displayed
+
+    - Pass
+
+- Reduce horizontal screen width to 320px to confirm no display errors
+
+    - Pass
+
+### Footer
+
+- Hover over footer icons to trigger animation
+
+    - Pass
+
+- Click each footer icon to confirm relevant social media page opens in a new window
+    - Pass
 
 ## Known Issues
 
