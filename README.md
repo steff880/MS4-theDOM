@@ -422,6 +422,17 @@ pip3 freeze > requirements.txt
 ## Credits
 ### Resources
 
+- All Course Videos came from the links below. The only difference is that I used the embed version of the urls. They can be found under each video, when clicking **Share**. All videos are from [freeCodeCamp.org](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
+
+[Python](https://www.youtube.com/watch?v=rfscVS0vtbw)
+[HTML](https://www.youtube.com/watch?v=pQN-pnXPaVg)
+[CSS](https://www.youtube.com/watch?v=1Rs2ND1ryYc)
+[JavaScript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
+[React](https://www.youtube.com/watch?v=4UZrsTqkcW4)
+[Django](https://www.youtube.com/watch?v=F5mRW0jo-U4)
+[Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
+
+
 - Resourses used for Courses description 
 
 [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
@@ -429,6 +440,7 @@ pip3 freeze > requirements.txt
 [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
 [Backend](https://www.careerexplorer.com/careers/back-end-developer/)
 [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+[Python](https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python)
 [HTML](https://en.wikipedia.org/wiki/HTML)
 [CSS](https://en.wikipedia.org/wiki/CSS)
 [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
