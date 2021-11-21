@@ -161,8 +161,21 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 Toasts are used to provide the user with a information when they perform a certain action on the website.
 Like adding courses to the bag, or writing a reviews, etc.
 
-![Review](/docs/images/toasts.png)
+![Bag](/docs/images/toasts.png)
 
+
+#### Shopping bag
+
+In the Shopping bag user can see their order total, if there is a discount applied, or how much more they need to spend in order to get a discount.
+
+![Review](/docs/images/shopping-bag.png)
+
+
+#### Checkout
+
+When the user goes to the Checkout page, there is an information about their order, how much they will be charged and a payment form in order to complete their order.
+
+![Checkout](/docs/images/checkout-page.png)
 
 ## Technologies Used
 ### Languages
