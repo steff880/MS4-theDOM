@@ -36,7 +36,7 @@ Use _HTML5_, _CSS3_, _JavaScript_, _Python_, _Django_ and _Stripe_
 
 ## Strategy
 ### Owner Goals
-- Be able to create a welcoming and easy to navigate site.
+- Be able to create a welcoming and easy-to-navigate site.
 - Be able to, as an admin, Add, Edit, or Delete Courses.
 - Allow users to search the database for courses.
 - Allow users to filter through courses, by selecting a category.
@@ -44,19 +44,19 @@ Use _HTML5_, _CSS3_, _JavaScript_, _Python_, _Django_ and _Stripe_
 
 #### First time user
 I would like to:
-- be able to determine the sites purpose.
+- be able to determine the purpose of the site.
 - be able to easily navigate through the site.
 - be able to create an account and receive an email confirmation.
 
 #### Returning User/Shopper
 I would like to:
-- be able to, view all available courses, in order to find one that best suits me.
-- be able to, view course description and reviews to help me decide, if that is the best course for me.
+- be able to, view all available courses, to find one that best suits me.
+- be able to, view course descriptions and reviews to help me decide if that is the best course for me.
 - be able to, add courses to the shopping bag and also see a confirmation of how many are being added.
 
 #### Logged in User/Shopper
 I would like to:
-- be able to, see all purchased courses in my Profile page.
+- be able to, see all purchased courses on my Profile page.
 - be able to, leave reviews.
 - be able to edit reviews.
 - be able to add courses to my Wishlist.
@@ -64,7 +64,7 @@ I would like to:
 
 ## Design
 
-Bootstrap, as well as custom CSS has been used to help create the current design of the website. 
+Bootstrap, as well as custom CSS, has been used to help create the current design of the website. 
 
 ### Colors
 
@@ -81,7 +81,7 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 #### Typography
 
-- Montserrat was used as main font throughout the website
+- Montserrat was used as the main font throughout the website
 
 ## Data Schema
 
@@ -94,8 +94,8 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 - The default fields are saved fields by the user to speed up the checkout process by pre-populating shipping details.
 
 **Order**
-- The order model is connected to the User Profile, allows the user to view their previous orders.
-- The order model acts as a container for the order line items. Although the item is stored within the OrderLineItem model, having them connected allows to retrieve the item purchased.
+- The order model is connected to the User Profile, allowing the user to view their previous orders.
+- The order model acts as a container for the order line items. Although the item is stored within the OrderLineItem model, having them connected allows retrieving the item purchased.
 
 **Course**
 - The course model holds key information for each course. Each course has a unique ID.
@@ -108,7 +108,7 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 **WishList**
 - The wishlist model allows users to save items for quicker access. These items can be removed.
-- This model also acts as a container for the WishListItem model. Just like the Order model, each wishlist is unique to each user but connecting to the user ID.
+- This model also acts as a container for the WishListItem model. Just like the Order model, each wishlist is unique to each user but connects to the user ID.
 
 ### Wireframes
 
@@ -127,7 +127,7 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 #### Intro 
 
-- Home page features a CTA button, a welcoming message and info about what is ofered on the site
+- Home page features a CTA button, a welcoming message, and info about what is offered on the site
 
 ![Info](/docs/images/info.png)
 
@@ -158,22 +158,22 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 #### Toasts
 
-Toasts are used to provide the user with a information when they perform a certain action on the website.
-Like adding courses to the bag, or writing a reviews, etc.
+Toasts are used to provide the user with information when they perform a certain action on the website.
+Like adding courses to the bag, or writing a review, etc.
 
 ![Bag](/docs/images/toasts.png)
 
 
 #### Shopping bag
 
-In the Shopping bag user can see their order total, if there is a discount applied, or how much more they need to spend in order to get a discount.
+In the Shopping bag, user can see their order total, if there is a discount applied, or how much more they need to spend to get a discount.
 
 ![Review](/docs/images/shopping-bag.png)
 
 
 #### Checkout
 
-When the user goes to the Checkout page, there is an information about their order, how much they will be charged and a payment form in order to complete their order.
+When the user goes to the Checkout page, there is information about their order, how much they will be charged, and a payment form to complete their order.
 
 ![Checkout](/docs/images/checkout-page.png)
 
@@ -253,7 +253,7 @@ When the user goes to the Checkout page, there is an information about their ord
 
 The master branch of this repository is the most current version and has been used for the deployed version of the site.
 
-The Code Institiue student template was used to create this project.
+The Code Institute student template was used to create this project.
 
 [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
@@ -271,7 +271,7 @@ The Code Institiue student template was used to create this project.
 3. In your local IDE open Git Bash
 4. Change the current working directory to the location where you want the cloned directory to be made
 5. Type `git clone`, and then paste the URL you copied in Step 2 - ``git clone https://github.com/steff880/MS4-theDOM.git``
-6. Set the following values in a `env.py` file.
+6. Set the following values in an `env.py` file.
 ```
 import os
 
@@ -282,7 +282,7 @@ os.environ.setdefault('STRIPE_SECRET_KEY', '<key generated by Stripe>')
 os.environ.setdefault('STRIPE_WH_SECRET', '<key generated by Stripe>')
 ```
 
-- Stripe keys are generated by Stripe, each individual have their own unique key values.
+- Stripe keys are generated by Stripe, each individual has their unique key values.
 - *PLEASE MAKE SURE NEVER TO PUBLISH THESE KEYS, ADD THE `env.py` TO A `.gitignore` TO AVOID PUSHING KEYS TO GITHUB.*
 7. Install the project requirements - `pip3 install requirements.txt`
 8. Apply database migrations - `python manage.py migrate`
@@ -293,13 +293,13 @@ os.environ.setdefault('STRIPE_WH_SECRET', '<key generated by Stripe>')
 
 1. Log into Heroku
 2. Create a new app, choose a location closest to you
-3. Search for Heroku Postgres from the resources tab and add to your project
+3. Search for Heroku Postgres from the resources tab and add it to your project
 4. Make sure to have `dj_database_url` and `psycopg2` installed.
 ```
 pip3 install dj_database_url
 pip3 install psycopg2
 ```
-5. Login to the Heroku CLI - `heroku login -i`
+5. log in to the Heroku CLI - `heroku login -i`
 6. Run migrations on Heroku Postgres - `heroku run python manage.py migrate`
 7. Create a superuser - `python manage.py createsuperuser`
 8. Install `gunicorn` - `pip3 install gunicorn`
@@ -309,19 +309,19 @@ pip3 install psycopg2
 web: gunicorn the_dom.wsgi:application
 ```
 11. Disable Heroku from collecting static files - `heroku config:set DISABLE_COLLECTSTATIC=1 --app <your-app-name>`
-12. Add the hostname to project settings.py file
+12. Add the hostname to the project settings.py file
 ```
 ALLOWED_HOSTS = ['<you-app-name>.herokuapp.com', 'localhost']
 
 ```
-13. Connect Heroku to you Github, by selecting Github as the deployment method and search for the github repository and pressing `connect`
+13. Connect Heroku to your Github, by selecting Github as the deployment method and searching for the GitHub repository, and press `connect`
 14. In Heroku, within settings, under config vars select `Reveal config vars`
 15. Add the following, 
 ```
-AWS_ACCESS_KEY_ID =	<your variable here>
-AWS_SECRET_ACCESS_KEY =	<your variable here>
-DATABASE_URL =	<added by Heroku when Postgres installed>
-DISABLE_COLLECTSTATIC =	1 
+AWS_ACCESS_KEY_ID = <your variable here>
+AWS_SECRET_ACCESS_KEY = <your variable here>
+DATABASE_URL =  <added by Heroku when Postgres installed>
+DISABLE_COLLECTSTATIC = 1 
 EMAIL_HOST_PASS = <your variable here>
 EMAIL_HOST_USER = <your variable here>
 SECRET_KEY = <your variable here>
@@ -385,14 +385,14 @@ git push
     - Click through and Create Group
 2. Select Policies:
     - Create policy
-    - Under JSON tab, click Import managed policy
+    - Under the JSON tab, click Import managed policy
     - Choose AmazongS3FullAccess
     - Edit the resource to include the Bucket ARN noted earlier when creating the Bucket Policy
     - Click next step and go to Review policy
     - Give the policy a name and description of your choice
     - Create policy
 3. Go back to User Groups and choose the group created earlier
-    - Under Permissions > Add permissions, choose Attach Policies and select the one just created
+    - Under Permissions > Add permissions, choose Attach Policies, and select the one just created
     - Add permissions
 4. Under Users:
     - Choose a user name 
@@ -422,7 +422,7 @@ pip3 freeze > requirements.txt
 ## Credits
 ### Resources
 
-- All Course Videos came from the links below. The only difference is that I used the embed version of the urls. They can be found under each video, when clicking **Share**. All videos are from [freeCodeCamp.org](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
+- All Course Videos came from the links below. The only difference is that I used the embed version of the URLs. They can be found under each video when clicking **Share**. All videos are from [freeCodeCamp.org](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ)
 
 [Python](https://www.youtube.com/watch?v=rfscVS0vtbw)
 [HTML](https://www.youtube.com/watch?v=pQN-pnXPaVg)
@@ -433,7 +433,7 @@ pip3 freeze > requirements.txt
 [Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
 
 
-- Resourses used for Courses description 
+- Resources used for Courses description 
 
 [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
 [Flask](https://pymbook.readthedocs.io/en/latest/flask.html)
@@ -447,7 +447,7 @@ pip3 freeze > requirements.txt
 [React](https://en.wikipedia.org/wiki/React_(JavaScript_library))
 [React](https://en.wikipedia.org/wiki/React_Native)
 
-- Code and Readme resourses
+- Code and Readme resources
 
 [Harry Leepz](https://github.com/Harry-Leepz/Nourish-and-Lift)
 
@@ -462,12 +462,12 @@ pip3 freeze > requirements.txt
 - Boutique Ado is a walkthrough project by Code Institute, this project gave students an introduction to Django/AWS S3/Stripe/Heroku Postgres
 - The core functionality of TheDOM is all taken from the Boutique Ado project.
 
-[Harry-Leepz, Nourish and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
+[Harry-Leepz, Nourish, and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
 
-- Rreview and wishlist part from the link above
+- Review and wishlist part from the link above
 
 **Bootstrap**
-- The Bootstrap Library was used through the project. The project used version 4.4.
+- The Bootstrap Library was used throughout the project. The project used version 4.4.
 - [Bootstrap](https://getbootstrap.com/docs/4.4/components/alerts/)
     - Toasts/Navigation Bar/Forms/Dropdown Menu/Buttons, the core elements mentioned are all found in the Bootstrap components section and built upon.
 
@@ -496,7 +496,7 @@ pip3 freeze > requirements.txt
 
 [unDraw](https://undraw.co/illustrations)
 
-The site does not allow to get individual liks for the illustrations.
+The site does not allow to get individual links for the illustrations.
 
 All illustrations can be found on the link above.
 
@@ -509,7 +509,7 @@ All illustrations can be found on the link above.
 -   The team at Code Institute, for teaching me the necessary skills to create this site.
 -   Tutor support, for their great help with this project
 -   Harry Leepz's and his amazing MS4 project [Nourish and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
--   [Edb83](https://github.com/Edb83/moose-juice) for his amazing README which I used as guide
+-   [Edb83](https://github.com/Edb83/moose-juice) for his amazing README which I used as a guide
 -   [Stackoverflow](https://stackoverflow.com/) - for general needs
 -   [w3schools](https://www.w3schools.com/)
 
