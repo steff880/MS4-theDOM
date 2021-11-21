@@ -116,10 +116,25 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 
 ## Features
-
-
-
 ### Existing Features
+
+#### Navigation Bar
+
+- Navbar is implemented on every page and is fully responsive across all resolutions.
+- Users can navigate across the site easily.
+
+![Navigation](/docs/images/navigation.png)
+
+#### Intro 
+
+- Home page features a CTA button, a welcoming message and info about what is ofered on the site
+
+![Info](/docs/images/info.png)
+
+![Info](/docs/images/about.png)
+
+![Info](/docs/images/about2.png)
+
 
 
 ## Technologies Used
