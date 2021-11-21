@@ -495,6 +495,11 @@ All illustrations can be found on the link above.
 
 -   My mentor, Oluwaseun Owonikoko, for her guidance and feedback.
 -   The team at Code Institute, for teaching me the necessary skills to create this site.
+-   Tutor support, for their great help with this project
+-   Harry Leepz's and his amazing MS4 project [Nourish and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
+-   [Edb83](https://github.com/Edb83/moose-juice) for his amazing README which I used as guide
 -   [Stackoverflow](https://stackoverflow.com/) - for general needs
+-   [w3schools](https://www.w3schools.com/)
+
 
 
