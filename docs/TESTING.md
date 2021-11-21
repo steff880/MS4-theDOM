@@ -303,6 +303,61 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 
     - Pass
 
+## Responsiveness
+
+The site has been designed with a mobile first approach, with the help of Bootstrap and has been testd using Chrome DevTools
+
+Media queries are used as well to maximize responsiveness.
+
+### Browsers
+
+Tested on:
+
+- Chrome
+
+    - No issues
+
+- Edge
+
+    - No issues
+
+- Opera 
+
+    - No issues
+
+- Firefox 
+
+    - No issues
+
+
+### Screen sizes
+
+Tested with Chrome DevTools using profiles for the following devices, accounting for minimum screen widths of 320px:
+
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- iPhone 5 SE
+- iPhone 6/7/8
+- iPhone 6/7/8 Plus
+- iPhone X
+- iPad
+- iPad Pro
+
+... and also using the responsive profiles of:
+
+- Mobile S (320px)
+- Mobile M (375px)
+- Mobile L (425px)
+- Tablet (768px)
+- Laptop (1024px)
+- Laptop L (1440px)
+
+Real world testing on:
+
+- Samsung Galaxy S10
+- Samsung Galaxy S9+
 
 
 ## Known Issues
