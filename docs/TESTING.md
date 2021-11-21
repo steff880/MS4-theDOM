@@ -266,6 +266,33 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 
     - Pass
 
+### Checkout
+
+- Confirm correct items and amounts carried over from the bag, including discount if applied
+
+    - Pass
+
+- Confirm Stripe webhooks successfully processed and Order saved
+
+    - Pass
+
+
+### My Account
+
+- Confirm details can be updated and they prepopulate checkout form
+
+    - Pass
+
+- Confirm buying a course adds an embeded video in the My Courses section 
+
+    - Pass
+
+![My courses](/docs/images/my-courses.png)
+
+- Confirm Order History is shown and successfully updates 
+
+    - Pass
+
 ## Known Issues
 
  When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
