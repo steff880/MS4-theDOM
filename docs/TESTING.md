@@ -82,3 +82,12 @@ no syntax errors in the project.
 - One error and one warning was found for a duplicate ID used. The reason for thisis that there is a second file for mobile-top-navigation and it contains the same code as the one on the **base template**. It does not affect the functionality of the website.
 
 ![W3C Markup Validator](/docs/images/w3c-markup.png)
+
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+- No errors found. All warnings are from bootstrap and vendor prefixes.
+
+![CSS](/docs/images/w3c-css.png)
+![CSS](/docs/images/w3c-css-bs.png)
+![CSS](/docs/images/w3c-css-vendor.png)
