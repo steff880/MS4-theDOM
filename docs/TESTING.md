@@ -293,6 +293,16 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 
     - Pass
 
+### Add/Edit Courses
+
+- Confirm only superuser can access those pages
+
+    - Pass
+
+- Confirm added or updated course reflected in database
+
+    - Pass
+
 ## Known Issues
 
  When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
