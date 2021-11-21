@@ -75,6 +75,8 @@ I would like to:
 
 ## Data Schema
 
+- [Schema Design](https://github.com/steff880/MS4-theDOM/tree/main/docs/Schema)
+
 
 ### Wireframes
 
