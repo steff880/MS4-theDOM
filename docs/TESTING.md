@@ -245,6 +245,27 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 
     - Pass
 
+### Shopping Bag
+
+- Confirm that when there are no courses in the shopping bag, visiting the Shopping Bag page displays a message saying "Your bag is empty" and there is a Keep Shopping Button, which navigates to Courses page
+    - Pass
+
+- Confirm quantities updated by clicking **Update**
+
+    - Pass
+
+- Confirm line items can be removed by clicking the **Remove**
+
+    - Pass
+
+- Confirm 10% discount is applied to orders over $30
+
+    - Pass
+
+- Confirm that if a course was removed from shopping bag, a toast message appears informing the user that it has been removed from the bag
+
+    - Pass
+
 ## Known Issues
 
  When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
