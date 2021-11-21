@@ -422,6 +422,24 @@ pip3 freeze > requirements.txt
 ## Credits
 ### Resources
 
+- Resourses used for Courses description 
+
+[Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+[Flask](https://pymbook.readthedocs.io/en/latest/flask.html)
+[Django](https://en.wikipedia.org/wiki/Django_(web_framework))
+[Backend](https://www.careerexplorer.com/careers/back-end-developer/)
+[Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+[HTML](https://en.wikipedia.org/wiki/HTML)
+[CSS](https://en.wikipedia.org/wiki/CSS)
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+[React](https://en.wikipedia.org/wiki/React_(JavaScript_library))
+[React](https://en.wikipedia.org/wiki/React_Native)
+
+- Code and Readme resourses
+
+[Harry Leepz](https://github.com/Harry-Leepz/Nourish-and-Lift)
+
+[Edb83](https://github.com/Edb83/moose-juice)
 
 [^ back to top ^](#table-of-contents)
 
