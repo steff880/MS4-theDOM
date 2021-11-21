@@ -425,6 +425,22 @@ pip3 freeze > requirements.txt
 
 ### Code
 
+- A large amount of code came from the Code Institute, Boutique Ado Project.
+[Code Institute, Boutique Ado](https://github.com/steff880/ci-boutique_ado_v1)
+- Boutique Ado is a walkthrough project by Code Institute, this project gave students an introduction to Django/AWS S3/Stripe/Heroku Postgres
+- The core functionality of TheDOM is all taken from the Boutique Ado project.
+
+[Harry-Leepz, Nourish and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift)
+
+- Rreview and wishlist part from the link above
+
+**Bootstrap**
+- The Bootstrap Library was used through the project. The project used version 4.4.
+- [Bootstrap](https://getbootstrap.com/docs/4.4/components/alerts/)
+    - Toasts/Navigation Bar/Forms/Dropdown Menu/Buttons, the core elements mentioned are all found in the Bootstrap components section and built upon.
+
+**Django Documentation**
+- [Django Documentation ](https://docs.djangoproject.com/en/3.2/)
 
 [^ back to top ^](#table-of-contents)
 
