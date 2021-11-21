@@ -303,6 +303,8 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
 
     - Pass
 
+
+
 ## Known Issues
 
  When initially planing for MS4 did not realize that, when I create a site about web dev courses, it will not be a good idea to let users choose quantity that is greater than 1.
@@ -312,6 +314,8 @@ Unfortunately when I relized it, was already too late to make big changes, due t
 This issue will be fixed in future updates.
 
 ![Course category](/docs/images/course-value-issue.png)
+
+- Bag is not saved if a user logs out while items are in their bag.
 
 
 ### W3C Validator Testing
