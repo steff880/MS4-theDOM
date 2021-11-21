@@ -61,6 +61,52 @@ Created new model and run migrations. It worked locally but seemed like the new 
 
 Had a _Tutor Assistance_ and was suggested to create environmental variable in gitpod called **DATABASE_URL**, which value was the _url_ for **Postgres** and set **DEBUG** to false. Stop the workspace and start it again. After doing this, in the _terminal_ was a message that I need to run migrations to **Postgres**. I used the command `python3 manage.py migrate --plan`, which showed everything that needs to be migrated. Confirmed that it is correct and run `python3 manage.py migrate`. Then when I reloaded the deployed site all worked normally.
 
+## Testing User Stories
+
+- Detemine site's purpouse
+
+    - Site's purpose is clearly notable from the moment user enters the site
+
+- Easy navigation
+
+    - The fixed top navigation bar makes the site easy to navigate from any position to any point of the site
+    - Site's logo will always take the user back to home page on desctop and home icon will do the same on mobile
+    - Button are placed through the site so the user can navigate to the other pages.
+
+- Account creation and email confirmation.
+
+    - Users can fill in the registration form and create an account.
+    - Uppon completing the registration form, users will receive a confirmation email with a link to activate their account.
+
+- View all courses and choose best for them.
+
+    - Users can navigate to Courses page through the navigation menu or from Explore Courses button.
+    - After creating an account, users can view the Course Detail page and learn more about the course.
+
+- View course description and reviews.
+
+    - Users can find course description on Course Detail page and also view all reviews.
+
+- Add courses to the bag and see a confirmation.
+
+    - Once users create an account, they can add courses to the shopping bag.
+    - If course is added to the bag, a toast message will inform the user that a course has been added to the bag.
+
+- Be able to view courses in the Profile page.
+
+    - If the user has made a purchase, the course video is added to their page.
+
+- Be able to leave reviews.
+
+    - If the user has an account, he/she can add reviews about courses after filling in the course review form.
+
+- Be able to eddit reviews.
+
+    - If user is logged in or a superuser, they can edit their course reviews.
+
+- Be able to add/remove courses to the wishlist.
+
+    - If the user has an account, he/she can add/remove courses to/from their wishlist.
 
 ## Manual Testing
 
