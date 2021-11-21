@@ -171,7 +171,79 @@ Click Bag (logged in as Registered user) to confirm goes to Shopping Bag page
     - Pass
 
 
+### Courses
 
+- Select each option from the Sort By selector to confirm courses are listed in the corresponding order
+
+    - Pass
+
+- Check against the database that the correct price is shown for each course
+
+    - Pass
+
+- Confirm the correct category is displayed for each course
+
+    - Pass
+
+![Category](/docs/images/category.png)
+
+- Click on the course image to display Course Detail Pge
+
+    - Pass
+
+### Course Details Page
+
+- Confirm correct information about Course is displayed
+
+    - Pass
+
+- Confirm no edit or delete buttons are shown if user is not **superuser**
+
+    - Pass
+
+- When logged in as a superuser confirm clicking edit button leads to the Edit Course page
+
+    - Pass
+
+- Confirm clicking delete button brings up modal asking for confirmation
+
+    - Pass
+
+- Confirm clicking Delete removes the course from the database
+
+    - Pass
+
+- Confirm that users can update the quantity using the +/- buttons or by inputing into the field
+
+    - Pass
+
+- Confirm that the quantity entered cannot be less than 1 or more than 2, either using arrow keys, clicking the +/- or entering the number manually
+
+    - Pass
+ 
+![Max value](/docs/images/max-value.png)
+
+- Confirm that clicking the Keep Shopping button takes user back to all courses view
+
+    - Pass
+
+- Confirm that clicking the Add to Bag button does add the course to the shopping bag
+
+    - Pass
+
+- Confirm that clicking the Add to Wishlist button does add the course to the wishlist
+
+    - Pass
+
+![Course info](/docs/images/course-info.png)
+
+- Confirm that if a course has no reivews, a message asking user to leave a review is displayed
+
+    - Pass
+
+- Confirm that only review owner or Super user can see edit button to edit their review
+
+    - Pass
 
 ## Known Issues
 
@@ -181,7 +253,7 @@ Unfortunately when I relized it, was already too late to make big changes, due t
 
 This issue will be fixed in future updates.
 
-![Course value](/docs/images/course-value-issue.png)
+![Course category](/docs/images/course-value-issue.png)
 
 
 ### W3C Validator Testing
