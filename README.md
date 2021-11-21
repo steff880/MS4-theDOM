@@ -61,8 +61,6 @@ I would like to:
 - be able to edit reviews.
 - be able to add courses to my Wishlist.
 - be able to remove courses from my Wishlist.
-## Scope
-
 
 ## Design
 
@@ -89,6 +87,28 @@ Bootstrap, as well as custom CSS has been used to help create the current design
 
 - [Schema Design](https://github.com/steff880/MS4-theDOM/tree/main/docs/Schema)
 
+#### **Key Models**
+
+**UserProfile**
+- The user profile is connected to the User model created by Allauth on registration.
+- The default fields are saved fields by the user to speed up the checkout process by pre-populating shipping details.
+
+**Order**
+- The order model is connected to the User Profile, allows the user to view their previous orders.
+- The order model acts as a container for the order line items. Although the item is stored within the OrderLineItem model, having them connected allows to retrieve the item purchased.
+
+**Course**
+- The course model holds key information for each course. Each course has a unique ID.
+- The course model is connected to the category model, this allows the user to filter courses by category.
+
+**CourseReview**
+- Reviews for courses can be left for courses with this model, having it connect to the course model via the ID.
+- The review model also is connected to the User model to obtain the user's username. This allows the user to see the name of the user on each review. 
+
+
+**WishList**
+- The wishlist model allows users to save items for quicker access. These items can be removed.
+- This model also acts as a container for the WishListItem model. Just like the Order model, each wishlist is unique to each user but connecting to the user ID.
 
 ### Wireframes
 
