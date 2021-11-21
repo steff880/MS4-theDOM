@@ -66,12 +66,24 @@ I would like to:
 
 ## Design
 
+Bootstrap, as well as custom CSS has been used to help create the current design of the website. 
+
 ### Colors
 
+- #212529
+
+- #fff
+
+- #f1f0ff
+
+- #536DFE
+
+- #aab7c4
 
 
 #### Typography
 
+- Montserrat was used as main font throughout the website
 
 ## Data Schema
 
