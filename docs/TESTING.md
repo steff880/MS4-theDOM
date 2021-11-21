@@ -1,3 +1,5 @@
+![Responsive](/docs/images/responsive1.png)
+
 ## Bugs and Fixes
 
 - Bug:
@@ -122,4 +124,3 @@ The python extention was used to test for Pep8 compliance and linting.
 - Line too long erros
 
     - Most of line too long errors were fixed during development
-    

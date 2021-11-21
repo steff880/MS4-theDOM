@@ -1,5 +1,6 @@
 <h1 align="center">TheDOM</h1>
 
+![Responsive](/docs/images/responsive1.png)
 
 ## Table of Contents
 
