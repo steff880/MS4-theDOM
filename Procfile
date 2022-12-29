@@ -1,1 +1,0 @@
-web: gunicorn the_dom.wsgi:application
