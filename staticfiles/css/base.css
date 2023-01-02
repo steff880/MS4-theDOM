@@ -1,0 +1,680 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    font-family: 'Montserrat';
+}
+
+/* Reset */
+
+ul {
+    margin: 0;
+}
+
+/* Custom classes */
+.bg-custom-dark {
+    background-color: #212529;
+}
+
+.bg-custom-white {
+    background-color: #f1f0ff;
+}
+
+.bg-custom {
+    background-image: -o-linear-gradient(345deg,
+            #536DFE 0%,
+            #536DFE 50%,
+            transparent 50%);
+    background-image: linear-gradient(105deg,
+            #536DFE 0%,
+            #536DFE 50%,
+            transparent 50%);
+}
+
+.explore-courses-btn {
+    background-color: #536DFE;
+    color: #fff;
+    min-width: 260px;
+    border: 2px solid #fff;
+    font-size: 1.15rem;
+    font-weight: 500;
+    -webkit-box-shadow: -5px 5px 0px #fff;
+    box-shadow: -5px 5px 0px #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-animation: popUp 0.9s ease-out;
+    animation: popUp 0.9s ease-out;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+
+.btn-black-sm {
+    background-color: #212529;
+    color: #fff !important;
+    min-width: 160px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-black {
+    background-color: #212529;
+    color: #fff !important;
+    min-width: 260px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-black {
+    color: #212529;
+}
+
+.text-blue {
+    color: #536DFE;
+}
+
+.text-small {
+    font-size: 50%;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.border-white {
+    border: 1px solid #fff !important;
+}
+
+.border-radius-sm {
+    border-radius: 10px;
+}
+
+.border-radius-med {
+    border-radius: 20px;
+}
+
+.border-radius-lg {
+    border-radius: 30px;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.box-shadow {
+    -webkit-box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4),
+        2px 2px 4px rgba(255, 255, 255, 0.2);
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4),
+        2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: black;
+}
+
+.custom-input-group-append,
+.custom-input-group-append-search,
+.custom-input-group-append-qty {
+    margin-left: -50px;
+}
+
+.custom-input-group-prepend,
+.custom-input-group-prepend-qty {
+    margin-right: -50px;
+}
+
+/* This is a custom class with neagtive margin.
+    Used to override the padding of the bootsrtap
+    container-fluid class. Allows to have a full width child container. 
+*/
+.negative-margin {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.skewed {
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+}
+
+.no-skew {
+    -webkit-transform: skewY(3deg);
+    -ms-transform: skewY(3deg);
+    transform: skewY(3deg);
+}
+
+.custom-divider-sm {
+    height: 4px;
+    border-radius: 50%;
+}
+
+.custom-divider {
+    height: 7px;
+    border-radius: 50%;
+}
+
+.large-icon {
+    font-size: 2rem;
+}
+
+.rotate {
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Hover effects */
+
+.explore-courses-btn:hover,
+.explore-courses-btn:active,
+.explore-courses-btn:focus {
+    -webkit-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    transform: scale(0.98);
+    color: #fff;
+    -webkit-box-shadow: -3px 3px 0px #fff;
+    box-shadow: -3px 3px 0px #fff;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus,
+.btn-black-sm:hover,
+.btn-black-sm:active,
+.btn-black-sm:focus,
+.social:hover {
+    -webkit-transform: translateY(-5px) scale(1.02);
+    -ms-transform: translateY(-5px) scale(1.02);
+    transform: translateY(-5px) scale(1.02);
+    -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.custom-hover:hover {
+    color: #536DFE !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active,
+.dropdown-item:focus {
+    background-color: #536DFE;
+}
+
+/* Override Bootstrap */
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-group-append .btn {
+    z-index: 3;
+}
+
+.input-group>.form-control:focus {
+    z-index: 1;
+}
+
+/* from Bulma */
+.icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+/* Animations */
+
+@-webkit-keyframes moveInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+
+    80% {
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-120px);
+        transform: translateX(-120px);
+    }
+
+    80% {
+        -webkit-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes popUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    60% {
+        -webkit-transform: scale(1.14);
+        transform: scale(1.14);
+    }
+
+    80% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    60% {
+        -webkit-transform: scale(1.14);
+        transform: scale(1.14);
+    }
+
+    80% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Main CSS */
+
+.hero-heading {
+    -webkit-animation: moveInRight 1s ease-out;
+    animation: moveInRight 1s ease-out;
+}
+
+.content {
+    -webkit-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    transform: translateX(-80px);
+    opacity: 0;
+    -webkit-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+    transition: all 0.9s ease-in-out;
+}
+
+.content.slide-right {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.social {
+    padding: 8px 18px;
+    background-color: #212529;
+    border-radius: 14px;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.social a i {
+    font-size: 1.5rem;
+}
+
+.increment-qty:focus,
+.decrement-qty:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.order-summary {
+    min-height: 50vh;
+}
+
+.order-number {
+    overflow-wrap: break-word;
+}
+
+input[name="q"]::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]::-moz-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+input[name="q"]::placeholder {
+    color: #aab7c4;
+}
+
+#review-form label {
+    color: #6c757d;
+    /* same as bootstrap text-muted class */
+    font-weight: 600;
+}
+
+#review-form .form-control {
+    border-radius: 10px;
+}
+
+
+/* remove arrows from input type number */
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    color: #212529;
+}
+
+.allauth-form-inner-content input {
+    border-color: #21252960;
+    border-radius: 10px;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::-webkit-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-moz-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input:-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::-ms-input-placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+/* Code from Boutique Ado */
+/* Course Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 4px;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+
+/* Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 119px;
+    }
+
+    body {
+        height: calc(100vh - 119px);
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-input-group-append {
+        margin-left: -30px;
+    }
+
+    .custom-input-group-prepend {
+        margin-right: -30px;
+    }
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hero-heading {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .explore-courses-btn {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    @-webkit-keyframes popUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        60% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        80% {
+            -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+        }
+
+        100% {
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+            opacity: 1;
+        }
+    }
+
+    @keyframes popUp {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+
+        60% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        80% {
+            -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+        }
+
+        100% {
+            -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+            opacity: 1;
+        }
+    }
+
+    .explore-courses-btn:hover,
+    .explore-courses-btn:active,
+    .explore-courses-btn:focus {
+        -webkit-transform: scale(0.87);
+        -ms-transform: scale(0.87);
+        transform: scale(0.87);
+        color: #fff;
+        -webkit-box-shadow: -3px 3px 0px #fff;
+        box-shadow: -3px 3px 0px #fff;
+    }
+
+    .backend-info,
+    .order-summary {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .no-results-img,
+    .empty-cart-img {
+        width: 75% !important;
+    }
+
+    .dropdown-menu {
+        font-size: 0.7rem;
+    }
+
+    .nav-link {
+        padding: 0.6rem;
+    }
+
+}
